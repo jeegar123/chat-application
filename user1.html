@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User 1: Chat</title>
+  <link rel="stylesheet" type="text/css" href="node_modules/rs-chat/dist/rs-chat.min.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131534054-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131534054-1');
+  </script>
+
+</head>
+<body>
+<div class="chatlist">
+  <div class="ltstChat"  style="cursor: pointer;" 
+    onclick="RSChat.start('2', 'User 2')">
+    <div class="chatProfilePic">
+      <img src="static/img/31.jpg" height="50">
+    </div>
+    <div class="chatListDtl">
+      <b>User 2</b><br>
+      <small>Lorem ipsum dolor sit amet</small>
+    </div>
+  </div>
+    
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+<script type="text/javascript" src="node_modules/rs-chat/dist/rs-chat.min.js"></script>
+
+<script type="text/javascript">
+
+RSChat.init({
+  socketUrl: 'http://localhost:8080/',
+  userId: '1',
+  name: 'Ravi shukla'
+});
+
+
+</script>
+</body>
+</html>
